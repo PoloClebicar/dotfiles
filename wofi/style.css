@@ -1,0 +1,53 @@
+window {
+margin: 0px;
+border: 0px solid #fdfdfd;
+font-family: "Monofur Nerd Font";
+font-size: 22px;
+background-image: linear-gradient(to right, #222222, #404b4e);
+}
+
+#input {
+margin: 5px;
+border: none;
+color: #f8f8f2;
+background-color: #404b4e;
+}
+
+#inner-box {
+margin: 35px;
+border: none;
+background-image: linear-gradient(to right, #222222, #404b4e);
+}
+
+#outer-box {
+margin: 35px;
+border: none;
+background-image: linear-gradient(to right, #222222, #404b4e);
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: #ffffff;
+} 
+#entry.activatable #text {
+color: #282a36;
+}
+
+#entry > * {
+color: #ffffff;
+}
+
+#entry:selected {
+background-color: #222222;
+border-radius: 10px;
+}
+
+#entry:selected #text {
+font-weight: bold;
+}

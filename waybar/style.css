@@ -1,0 +1,77 @@
+/* General styles */
+* {
+  border: none;
+  border-radius: 8px;
+  font-family: "Monofur Nerd Font", monospace;
+  font-size: 18px;
+  color: #ffffff;	
+  margin: 1px;
+}
+/* Style the Waybar container */
+window#waybar {
+  background: rgba(6,57,112,0); /* Transparent background */
+}
+/* Modules styling */
+.modules-right {
+  transition: none;
+  background-image: linear-gradient(to right, #191919, #202020);
+  margin-left: 15px;
+}
+/* Workspaces bar style */
+#workspaces {
+  background-image: linear-gradient(to right, #191919, #202020);
+  transition: none;
+}
+#workspaces button {
+  transition: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #888; /* Set default color */
+  border: none;
+}
+/* Workspace button hover effect */
+#workspaces button:hover {
+  background: #3b4252; /* Slightly darker on hover */
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  text-shadow: inherit;
+}
+/* Active (focused) workspace */
+#workspaces button.active {
+  color: #ffffff;
+  background: #5e81ac; /* nord-blue */
+  border-radius: 6px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Optional glow */
+}
+/* Urgent workspace (notifications or alerts) */
+#workspaces button.urgent {
+  background: #bf616a;
+  color: #ffffff;
+  border-radius: 6px;
+}
+#tray {
+  margin-right: 15px;
+}
+
+/* New modules styling - minimal additions for new modules */
+#cpu, #memory, #temperature, #disk {
+  padding: 0 7px;
+}
+
+/* Critical temperature warning */
+#temperature.critical {
+  background-color: #bf616a;
+  color: #ffffff;
+}
+
+/* Battery states styling - only if you want them */
+#battery.warning {
+  background-color: #ebcb8b;
+  color: #2e3440;
+}
+
+#battery.critical {
+  background-color: #bf616a;
+  color: #ffffff;
+}

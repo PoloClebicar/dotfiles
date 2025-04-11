@@ -1,0 +1,13 @@
+(defsrc
+	caps
+	ralt
+)
+
+(defalias
+	escctl (tap-hold 120 120 esc lctrl)
+)
+
+(deflayer polo
+	@escctl	
+	lsft
+)
