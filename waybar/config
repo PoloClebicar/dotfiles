@@ -1,23 +1,23 @@
 // -*- mode: json -*-
 {
   "layer": "top",
-  "position": "bottom",
-  "margin-top": 0,
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
-    "memory",
-    "temperature",
+  "height" : 45,
+    "position": "bottom",
+    "margin-top": 0,
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "memory",
     "battery",
     "pulseaudio",
     "network",
     "clock"
-  ],
-  "modules-left" :[
-    "custom/mullvad",
+    ],
+    "modules-left" :[
+      "custom/mullvad",
     "tray"
-  ],
+    ],
     "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
@@ -33,77 +33,72 @@
         "10": "   "
       }
     },
-  "clock": {
-    "format": " <span size='large' weight='bold'>{:%H:%M}</span> ",
-    "tooltip": true,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "on-click": "gnome-calendar"
-  },
-  "cpu": {
-    "interval": 2,
-    "format": "  {usage}%",
-    "tooltip": true
-  },
-  "memory": {
-    "interval": 2,
-    "format": "  {}%",
-    "tooltip": true
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}",
-    "format-icons": [""]
-  },
-  "pulseaudio": {
-    "format": "  {volume:2} ",
-    "format-bluetooth": "  {volume}% ",
-    "format-muted": "MUTE",
-    "format-icons": {
+    "clock": {
+      "format": " <span size='large' weight='bold'>{:%H:%M}</span> ",
+      "tooltip": true,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "on-click": "gnome-calendar"
     },
-    "scroll-step": 5,
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol"
-  },
 
-  "network": {
-    "format-wifi": " ",
-    "format-ethernet": " ",
-    "format-disconnected": " ",
-    "tooltip-format-disconnected": "Error",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} 🖧 ",
-    "on-click": "nm-connection-editor",
-    "on-click-right": "nmtui"
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+    "memory": {
+      "interval": 60,
+      "format": "  {}%",
+      "on-click": "~/.config/waybar/scripts/launch-btop.sh",
+      "tooltip": true
     },
-    "format": "{icon} {capacity} ",
-    "format-charging": "{icon} {capacity} ",
-    "format-plugged": "{icon} {capacity} ",
-    "format-icons": [
-       " " ,
-      " ",
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{icon} {temperatureC}",
+      "format-icons": [""]
+    },
+
+    "pulseaudio": {
+      "format": "  {volume:2}% ",
+      "format-bluetooth": "  {volume}% ",
+      "format-muted": "󰝟  00 ",
+      "format-icons": {
+      },
+      "scroll-step": 2,
+      "on-click": "pavucontrol",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "network": {
+      "format-wifi": " ",
+      "format-ethernet": " ",
+      "format-disconnected": " ",
+      "tooltip-format-disconnected": "Error",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+      "tooltip-format-ethernet": "{ifname} 🖧 ",
+      "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+      "bat": "BAT0",
+      "interval": 5,
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}% ",
+      "format-charging": "󰂄 {capacity}% ",
+      "format-plugged": "󰂄 {capacity}% ",
+      "format-icons": [
+        " ",
       " ",
-      " ",
-      "󰂄"
-    ]
-  },
-  "disk": {
-    "interval": 5,
-    "format": "  {percentage_used:2}%",
-    "path": "/"
-  },
-  "custom/mullvad": {
-    "exec": "~/.config/waybar/scripts/mullvad-status.sh",
-    "interval": 5,
-    "format": "{}"
-  },
-  "tray": {
-    "icon-size": 21 ,
-    "spacing": 9 
-  }
+      " ",
+      " ",
+      ]
+    },
+
+    "custom/mullvad": {
+      "exec": "~/.config/waybar/scripts/mullvad-status.sh",
+      "interval": 5,
+      "format": "{}"
+    },
+    "tray": {
+      "icon-size": 21 ,
+      "spacing": 9 
+    }
 }

@@ -15,4 +15,6 @@ fi
 # Brave aways open on the laptop screen, so it does no matter if the monitor is on or not
 # Launch Brave in two different profiles
 brave &
+mullvad connect &
+kanata -c ~/.config/kanata/config.kbd &
 
