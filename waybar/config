@@ -12,7 +12,9 @@
     "battery",
     "pulseaudio",
     "network",
-    "clock",
+    "clock"
+  ],
+  "modules-left" :[
     "custom/mullvad",
     "tray"
   ],
@@ -95,8 +97,13 @@
     "format": "  {percentage_used:2}%",
     "path": "/"
   },
+  "custom/mullvad": {
+    "exec": "~/.config/waybar/scripts/mullvad-status.sh",
+    "interval": 5,
+    "format": "{}"
+  },
   "tray": {
-    "icon-size": 18,
-    "spacing": 5
+    "icon-size": 21 ,
+    "spacing": 9 
   }
 }

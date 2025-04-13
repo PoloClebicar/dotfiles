@@ -5,8 +5,9 @@
   font-family: "Monofur Nerd Font", monospace;
   font-size: 18px;
   color: #ffffff;	
-  margin: 1px;
+  margin-bottom: 1px;
 }
+
 /* Style the Waybar container */
 window#waybar {
   background: rgba(6,57,112,0); /* Transparent background */
@@ -15,7 +16,14 @@ window#waybar {
 .modules-right {
   transition: none;
   background-image: linear-gradient(to right, #191919, #202020);
-  margin-left: 15px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+.modules-left{
+  transition: none;
+  background-image: linear-gradient(to right, #191919, #202020);
+  padding: 10px 10px;
+  margin-left: 20px;
 }
 /* Workspaces bar style */
 #workspaces {
@@ -43,15 +51,13 @@ window#waybar {
   border-radius: 6px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Optional glow */
+  margin-bottom: 0px;
 }
 /* Urgent workspace (notifications or alerts) */
 #workspaces button.urgent {
   background: #bf616a;
   color: #ffffff;
   border-radius: 6px;
-}
-#tray {
-  margin-right: 15px;
 }
 
 /* New modules styling - minimal additions for new modules */
@@ -74,4 +80,8 @@ window#waybar {
 #battery.critical {
   background-color: #bf616a;
   color: #ffffff;
+}
+
+#tray > .item {
+  margin: 0 4px;
 }
