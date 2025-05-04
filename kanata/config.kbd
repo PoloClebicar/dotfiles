@@ -3,6 +3,8 @@
 	ralt
 )
 
+(defcfg)
+
 (defalias
 	escctl (tap-hold 120 120 esc lctrl)
 )

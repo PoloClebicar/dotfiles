@@ -15,7 +15,6 @@
     "clock"
     ],
     "modules-left" :[
-      "custom/mullvad",
     "tray"
     ],
     "hyprland/workspaces": {
@@ -55,7 +54,7 @@
     "pulseaudio": {
       "format": "  {volume:2}% ",
       "format-bluetooth": "  {volume}% ",
-      "format-muted": "󰝟  00 ",
+      "format-muted": "󰝟  00% ",
       "format-icons": {
       },
       "scroll-step": 2,
@@ -92,11 +91,6 @@
       ]
     },
 
-    "custom/mullvad": {
-      "exec": "~/.config/waybar/scripts/mullvad-status.sh",
-      "interval": 5,
-      "format": "{}"
-    },
     "tray": {
       "icon-size": 21 ,
       "spacing": 9 

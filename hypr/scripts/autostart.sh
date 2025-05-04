@@ -16,5 +16,4 @@ fi
 # Launch Brave in two different profiles
 brave &
 mullvad connect &
-kanata -c ~/.config/kanata/config.kbd &
 
